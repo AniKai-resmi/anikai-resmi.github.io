@@ -15,8 +15,33 @@ body {
     overflow: hidden;
 }
 
+/* ÜST INSTAGRAM ÇUBUĞU */
+.topbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(20, 0, 30, 0.85);
+    backdrop-filter: blur(6px);
+    padding: 10px 0;
+    box-shadow: 0 0 15px #ff33cc;
+    z-index: 999;
+}
+
+.topbar a {
+    color: #ff99dd;
+    text-decoration: none;
+    font-size: 15px;
+    text-shadow: 0 0 10px #ff33cc;
+    transition: 0.3s;
+}
+
+.topbar a:hover {
+    color: white;
+}
+
 .container {
-    padding: 100px 20px;
+    padding: 140px 20px;
 }
 
 .logo {
@@ -67,7 +92,7 @@ button:hover {
     box-shadow: 0 0 20px #ff33cc;
 }
 
-/* indirme glow efekti */
+/* İNDİRME GLOW EFEKTİ */
 .downloading {
     animation: glowPulse 1s infinite;
     box-shadow: 0 0 20px #ff33cc, 0 0 40px #ff00ff;
@@ -82,6 +107,13 @@ button:hover {
 </head>
 
 <body>
+
+<!-- INSTAGRAM ÜST BAR -->
+<div class="topbar">
+    <a href="https://www.instagram.com/anikai_official/" target="_blank">
+        🌸 AniKai Instagram hesabımızı takip et
+    </a>
+</div>
 
 <div class="container">
     <img src="anikai.png" class="logo" alt="AniKai Logo">
