@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>AniKai</title>
+
 <style>
 body {
     margin: 0;
@@ -57,59 +58,6 @@ button:hover {
     box-shadow: 0 0 20px #ff33cc;
 }
 </style>
-</head>
-<body>
-
-<div class="container">
-    <img src="ANİKAİ-İCON.png" class="logo">
-    <h1>AniKai</h1>
-    <p>Anime Dünyasına Açılan Kapı 🌸</p>
-    <button>Yakında İndir</button>
-</div>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>AniKai</title>
-
-<style>
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #1a001f, #330033);
-    color: white;
-    text-align: center;
-    overflow: hidden;
-}
-
-.container {
-    padding: 100px 20px;
-}
-
-.logo {
-    width: 150px;
-    margin-bottom: 20px;
-    filter: drop-shadow(0 0 20px #ff33cc);
-    animation: float 3s ease-in-out infinite;
-}
-
-@keyframes float {
-    0% { transform: translateY(0px); }
-    50% { transform: translateY(-10px); }
-    100% { transform: translateY(0px); }
-}
-
-h1 {
-    font-size: 60px;
-    color: #ff66cc;
-    text-shadow: 0 0 20px #ff33cc;
-}
-
-p {
-    font-size: 20px;
-    color: #ddd;
-}
-</style>
 
 </head>
 <body>
@@ -118,6 +66,7 @@ p {
     <img src="anikai-icon.png" class="logo">
     <h1>AniKai</h1>
     <p>Anime Dünyasına Açılan Kapı 🌸</p>
+    <button>Yakında İndir</button>
 </div>
 
 <audio id="bgMusic" autoplay loop>
@@ -127,20 +76,11 @@ p {
 <script>
 window.addEventListener("load", function() {
     const music = document.getElementById("bgMusic");
-
-    // Otomatik başlatmayı zorla dene
-    const playPromise = music.play();
-
-    if (playPromise !== undefined) {
-        playPromise.catch(() => {
-            console.log("Tarayıcı otomatik sesi engelledi.");
-        });
-    }
+    music.play().catch(() => {
+        console.log("Tarayıcı sesi engelledi.");
+    });
 });
 </script>
-
-</body>
-</html>
 
 </body>
 </html>
