@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="tr">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>AniKai</title>
 
 <style>
@@ -11,6 +12,7 @@ body {
     background: linear-gradient(135deg, #1a001f, #330033);
     color: white;
     text-align: center;
+    overflow: hidden;
 }
 
 .container {
@@ -18,7 +20,7 @@ body {
 }
 
 .logo {
-    width: 150px;
+    width: 160px;
     margin-bottom: 20px;
     filter: drop-shadow(0 0 20px #ff33cc);
     animation: float 3s ease-in-out infinite;
@@ -26,12 +28,12 @@ body {
 
 @keyframes float {
     0% { transform: translateY(0px); }
-    50% { transform: translateY(-10px); }
+    50% { transform: translateY(-12px); }
     100% { transform: translateY(0px); }
 }
 
 h1 {
-    font-size: 60px;
+    font-size: 55px;
     color: #ff66cc;
     text-shadow: 0 0 20px #ff33cc;
 }
@@ -58,29 +60,20 @@ button:hover {
     box-shadow: 0 0 20px #ff33cc;
 }
 </style>
-
 </head>
+
 <body>
 
 <div class="container">
-    <img src="anikai-icon.png" class="logo">
+    <img src="ANİKAİ İCON.png" class="logo" alt="AniKai Logo">
     <h1>AniKai</h1>
     <p>Anime Dünyasına Açılan Kapı 🌸</p>
     <button>Yakında İndir</button>
 </div>
 
-<audio id="bgMusic" autoplay loop>
+<audio autoplay loop>
     <source src="download.mp3" type="audio/mpeg">
 </audio>
-
-<script>
-window.addEventListener("load", function() {
-    const music = document.getElementById("bgMusic");
-    music.play().catch(() => {
-        console.log("Tarayıcı sesi engelledi.");
-    });
-});
-</script>
 
 </body>
 </html>
