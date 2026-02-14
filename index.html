@@ -59,6 +59,18 @@ button:hover {
     transform: scale(1.1);
     box-shadow: 0 0 20px #ff33cc;
 }
+
+/* indirme glow efekti */
+.downloading {
+    animation: glowPulse 1s infinite;
+    box-shadow: 0 0 20px #ff33cc, 0 0 40px #ff00ff;
+}
+
+@keyframes glowPulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.08); }
+    100% { transform: scale(1); }
+}
 </style>
 </head>
 
@@ -68,12 +80,26 @@ button:hover {
     <img src="anikai.png" class="logo" alt="AniKai Logo">
     <h1>AniKai</h1>
     <p>Anime Dünyasına Açılan Kapı 🌸</p>
-    <button>En Son Sürümü İndir DATTEBAYO!!!</button>
+
+    <!-- ÇALIŞAN İNDİR BUTONU -->
+    <a href="anikaii%20(4).apk" download>
+        <button id="downloadBtn" onclick="startDownloadEffect()">
+            En Son Sürümü İndir DATTEBAYO!!!
+        </button>
+    </a>
 </div>
 
 <audio autoplay loop>
     <source src="download.mp3" type="audio/mpeg">
 </audio>
+
+<script>
+function startDownloadEffect() {
+    const btn = document.getElementById("downloadBtn");
+    btn.classList.add("downloading");
+    btn.innerText = "APK indiriliyor...";
+}
+</script>
 
 </body>
 </html>
