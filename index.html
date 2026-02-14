@@ -12,7 +12,7 @@ body {
     background: linear-gradient(135deg, #1a001f, #330033);
     color: white;
     text-align: center;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 /* ÜST INSTAGRAM ÇUBUĞU */
@@ -92,7 +92,7 @@ button:hover {
     box-shadow: 0 0 20px #ff33cc;
 }
 
-/* İNDİRME GLOW EFEKTİ */
+/* İNDİRME EFEKTİ */
 .downloading {
     animation: glowPulse 1s infinite;
     box-shadow: 0 0 20px #ff33cc, 0 0 40px #ff00ff;
@@ -103,12 +103,33 @@ button:hover {
     50% { transform: scale(1.08); }
     100% { transform: scale(1); }
 }
+
+/* HAKKINDA BÖLÜMÜ */
+.about {
+    margin-top: 120px;
+    padding: 50px 20px;
+    background: rgba(255,255,255,0.04);
+    box-shadow: 0 0 20px #ff33cc;
+}
+
+.about h2 {
+    color: #ff66cc;
+    text-shadow: 0 0 15px #ff33cc;
+}
+
+.about p {
+    max-width: 800px;
+    margin: auto;
+    color: #ddd;
+    line-height: 1.6;
+    font-size: 18px;
+}
 </style>
 </head>
 
 <body>
 
-<!-- INSTAGRAM ÜST BAR -->
+<!-- INSTAGRAM BAR -->
 <div class="topbar">
     <a href="https://www.instagram.com/anikai_official/" target="_blank">
         🌸 AniKai Instagram hesabımızı takip et
@@ -121,12 +142,27 @@ button:hover {
     <p class="version">AniKai v1.0</p>
     <p>Anime Dünyasına Açılan Kapı 🌸</p>
 
-    <!-- ÇALIŞAN İNDİR BUTONU -->
+    <!-- APK İNDİRME -->
     <a href="anikaii%20(4).apk" download>
         <button id="downloadBtn" onclick="startDownloadEffect()">
             En Son Sürümü İndir DATTEBAYO!!!
         </button>
     </a>
+</div>
+
+<!-- HAKKINDA -->
+<div class="about">
+    <h2>Hakkında</h2>
+    <p>
+    AniKai, anime severler için oluşturulmuş modern ve kullanıcı odaklı bir anime platformudur. 
+    Amacımız anime dünyasını tek bir yerde toplamak, kolay erişim sağlamak ve güçlü bir topluluk oluşturmaktır.
+
+    Kullanıcılar yeni animeleri keşfedebilir, popüler serileri takip edebilir ve güncel içeriklere hızlı şekilde ulaşabilir. 
+    Neon temalı tasarımımız ve anime kültüründen ilham alan yapımız ile hem yeni başlayanlara hem de deneyimli izleyicilere hitap ediyoruz.
+
+    AniKai yalnızca bir uygulama değil; anime tutkunlarının bir araya geldiği, öneriler paylaştığı ve aynı ilgi alanını taşıyan 
+    insanlarla bağlantı kurduğu bir topluluk platformudur. Sürekli güncellenen özellikler ve mobil uygulama desteği ile her geçen gün büyümeye devam ediyoruz.
+    </p>
 </div>
 
 <audio autoplay loop>
